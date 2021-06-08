@@ -1,13 +1,76 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
 
 <head>
-  <title>Express</title>
-  <link rel="stylesheet" href="/stylesheets/style.css">
+    <meta charset="UTF-8">
+    <title>Projet Express</title>
+
+    <!-- Bootsrap CSS link -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <!-- Custom CSS link -->
+    <link rel="stylesheet" href="stylesheets/style.css">
 </head>
 
 <body>
-  <h1>Express</h1>
-  <p>Welcome to Express</p>
+    <nav class="navbar navbar-expand-sm navbar-dark bg-info p-0 fixed-top">
+        <div class="container">
+            <span class="navbar-brand">Express JS</span>
+            <button class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarCollapse">
+                <ul class="navbar-nav ml-auto ">
+                    <li class="nav-item ">
+                        <a href="index.html" class="nav-link ">
+                            <i class="fas fa-user-times "></i> Logout
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    
+    <!-- USERS -->
+    <section id="posts">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                <br><br><br><br>
+                    <div class="card">
+                        <div class="card-header">
+                            <h4>Users</h4>
+                        </div>
+                        <table class="table table-hover">
+                            <thead class="thead-light">
+                                <tr>
+                                    <th>#</th>
+                                    <th>Username</th>
+                                    <th>Email</th>
+                                    <th>Role</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>1</td>
+                                    <td>Salma BOUAOUID</td>
+                                    <td>salmabouaouid57@gmail.com</td>
+                                    <td>Author</td>
+                                </tr>
+                                <tr>
+                                    <td>2</td>
+                                    <td>Kawtar GOURAI</td>
+                                    <td>k.gourai14@gmail.com</td>
+                                    <td>Guest</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
 </body>
 
 </html>
