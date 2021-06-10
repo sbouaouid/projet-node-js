@@ -1,20 +1,38 @@
 const { User } = require('../models')
 
 module.exports = {
-    getAllUsers() {
-    return User.findAll()
+
+getAllUsers() { 
+    return User.findAll() 
 },
 
-// méthodes à implémenter
-getUsers(offset = 0, limit = 10) { },
-getAdmins() { },
-getAuthors() { },
-getGuests(){ },
-getUser(id) { },
-getUserByEmail(email) { },
-addUser(user) { },
-updateUser() { },
-deleteUser() { },
-
-// D'autres méthodes jugées utiles
+getUsers(offset=0, limit=10) {
+    return User.findAll({ offset: offset, limit: limit});
+},
+getAdmins() {
+    return User.findAll({where: {role: "admin"}});
+},
+getAuthors() {
+    return User.findAll({where: {role: "author"}});
+},
+getGuests() {
+    return User.findAll({where: {role: "guest"}});
+},
+getUser(id) {
+    return User.findAll({where:{id: id}});
+},
+getUserByEmail(email) {
+    return User.findAll({where: {email: email}});
+},
+addUser(user) {
+    User.create(user);
+},
+updateUser(id) {
+    User.update(await User.findOne({ where: { id: id } }), {where: {id: id}});
+},
+deleteUser(id) {
+    User.destroy({where: {id: id}})
 }
+}
+
+

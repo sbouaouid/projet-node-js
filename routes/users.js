@@ -1,9 +1,17 @@
 const router = require('express').Router();
 const usersRepo = require('../repositories/users')
 
-/* GET users listing. */
-router.get('/', async function(req, res, next) {
-  res.send(await usersRepo.getAllUsers())
-});
+router.get('/', controllers.getAllUsers)
+
+router.get('/users', controllers.getUsers)
+
+router.post('/users', controllers.createUser)
+
+router.get('/users/:id', controllers.getUserById)
+
+router.put('/users/:id', controllers.updateUser)
+
+router.delete('/users/:id', controllers.deleteUser)
+
 
 module.exports = router;

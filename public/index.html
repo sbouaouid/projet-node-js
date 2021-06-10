@@ -7,6 +7,8 @@
 
     <!-- Bootsrap CSS link -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <!-- Fontawesome CSS link -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css">
     <!-- Custom CSS link -->
     <link rel="stylesheet" href="stylesheets/style.css">
 </head>
@@ -14,7 +16,7 @@
 <body>
     <nav class="navbar navbar-expand-sm navbar-dark bg-info p-0 fixed-top">
         <div class="container">
-            <span class="navbar-brand">Express JS</span>
+            <span class="navbar-brand">Admin interface</span>
             <button class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -30,13 +32,26 @@
         </div>
     </nav>
 
+<br/><br/>
+<section class="py-4 mb-2 bg-light shadow-sm">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6 offset-md-3">
+                        <a href="#" class="btn btn-info btn-block shadow">
+                            <i class="fas fa-plus"></i> Add user
+                        </a>
+                    </div>
+                </div>
+            </div>
+ </section>
+
     
     <!-- USERS -->
     <section id="posts">
         <div class="container">
             <div class="row">
                 <div class="col-md-12">
-                <br><br><br><br>
+                <br><br>
                     <div class="card">
                         <div class="card-header">
                             <h4>Users</h4>
@@ -48,6 +63,7 @@
                                     <th>Username</th>
                                     <th>Email</th>
                                     <th>Role</th>
+                                    <th colspan="2">Actions</th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -56,12 +72,32 @@
                                     <td>Salma BOUAOUID</td>
                                     <td>salmabouaouid57@gmail.com</td>
                                     <td>Author</td>
+                                    <td><button class="btn btn-light"><i class="fas fa-info-circle group_inf"></i></button></td>
+                                    <td><button class="btn btn-light"><i class="fas fa-trash group_del" id=""></i></button></td>    
                                 </tr>
                                 <tr>
                                     <td>2</td>
                                     <td>Kawtar GOURAI</td>
                                     <td>k.gourai14@gmail.com</td>
                                     <td>Guest</td>
+                                    <td><button class="btn btn-light"><i class="fas fa-info-circle group_inf"></i></button></td>
+                                    <td><button class="btn btn-light"><i class="fas fa-trash group_del" id=""></i></button></td>
+                                </tr>
+                                <tr>
+                                    <td>2</td>
+                                    <td>Lamiaa JAOUZLI</td>
+                                    <td>lemy.jazouli@gmail.com</td>
+                                    <td>Guest</td>
+                                    <td><button class="btn btn-light"><i class="fas fa-info-circle group_inf"></i></button></td>
+                                    <td><button class="btn btn-light"><i class="fas fa-trash group_del" id=""></i></button></td> 
+                                </tr>
+                                <tr>
+                                    <td>2</td>
+                                    <td>Zakaria BOUAOUID</td>
+                                    <td>zak.bouaouid@gmail.com</td>
+                                    <td>Admin</td>
+                                    <td><button class="btn btn-light"><i class="fas fa-info-circle group_inf"></i></button></td>
+                                    <td><button class="btn btn-light"><i class="fas fa-trash group_del" id=""></i></button></td> 
                                 </tr>
                             </tbody>
                         </table>
@@ -70,7 +106,7 @@
             </div>
         </div>
     </section>
-    
+
 </body>
 
 </html>
